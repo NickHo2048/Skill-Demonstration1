@@ -37,7 +37,7 @@ class Math{
         //creates the second number
         int second = contents[position] - 48;
         position++;
-        while((contents[position]>=48) && (contents[position]<=57 && position < contents.length)){
+        while(position < contents.length && (contents[position]>=48) && (contents[position]<=57)){
             second = second * 10 + contents[position] - 48;
             position++;
         }
