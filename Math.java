@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 class Math{
     public static int math(String function){
+        function = function.toLowerCase();
         char[] contents = function.toCharArray();
         int position = 0;
         //iterates through passed string until a number is found
@@ -41,16 +42,16 @@ class Math{
             position++;
         }
 
-        if(function.contains("Multiply")){
+        if(function.contains("mult") || function.contains("*")){
             return first*second;
         }
-        else if(function.contains("Divide")){
+        else if(function.contains("div") || function.contains("/")){
             return first/second;
         }
-        else if(function.contains("Subtract")){
+        else if(function.contains("sub") || function.contains("-")){
             return first-second;
         }
-        else if(function.contains("Add")){
+        else if(function.contains("add") || function.contains("+")){
 
             return first+second;
         }
